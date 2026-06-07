@@ -1,0 +1,87 @@
+2026-06-07 00:25:05,906 | ERROR | Training Script Failed: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\ml projects\\heart disease prediction system\\dataset\\heart.csv'
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\backend\training.py", line 49, in train_model
+    df = pd.read_csv(DATASET_PATH)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\ml projects\\heart disease prediction system\\dataset\\heart.csv'
+2026-06-07 00:27:49,504 | ERROR | Training Script Failed: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\ml projects\\heart disease prediction system\\dataset\\heart.csv'
+Traceback (most recent call last):
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\backend\training.py", line 49, in train_model
+    df = pd.read_csv(DATASET_PATH)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\HP\Desktop\ml projects\heart disease prediction system\venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\ml projects\\heart disease prediction system\\dataset\\heart.csv'
+2026-06-07 00:36:39,504 | INFO | Dataset loaded with shape: (1025, 14)
+2026-06-07 00:36:39,516 | INFO | Train shape: (869, 13), Test shape: (156, 13)
+2026-06-07 00:36:40,968 | INFO | Model training completed
+2026-06-07 00:36:41,300 | INFO | Train Accuracy: 0.9010 | Recall: 0.9431 | F1: 0.9059
+2026-06-07 00:36:41,301 | INFO | Test  Accuracy: 0.8141 | Recall: 0.8966 | F1: 0.8432
+2026-06-07 00:36:41,306 | INFO | Train Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.94      0.86      0.90       430
+           1       0.87      0.94      0.91       439
+
+    accuracy                           0.90       869
+   macro avg       0.90      0.90      0.90       869
+weighted avg       0.90      0.90      0.90       869
+
+2026-06-07 00:36:41,313 | INFO | Test Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.84      0.71      0.77        69
+           1       0.80      0.90      0.84        87
+
+    accuracy                           0.81       156
+   macro avg       0.82      0.80      0.81       156
+weighted avg       0.82      0.81      0.81       156
+
+2026-06-07 00:36:41,597 | INFO | Model saved to: C:\Users\HP\Desktop\ml projects\heart disease prediction system\model_dir\heart_disease_prediction_model.joblib
+2026-06-07 00:36:41,597 | INFO | Training Script Completed
+2026-06-07 01:19:19,245 | INFO | Model loaded successfully.
+2026-06-07 01:30:05,968 | INFO | Model loaded successfully.
+2026-06-07 15:50:35,748 | INFO | Model loaded successfully.
+2026-06-07 16:15:03,553 | INFO | Model loaded successfully.
