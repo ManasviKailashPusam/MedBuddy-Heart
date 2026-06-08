@@ -85,3 +85,5 @@ weighted avg       0.82      0.81      0.81       156
 2026-06-07 01:30:05,968 | INFO | Model loaded successfully.
 2026-06-07 15:50:35,748 | INFO | Model loaded successfully.
 2026-06-07 16:15:03,553 | INFO | Model loaded successfully.
+2026-06-07 16:58:55,074 | INFO | Model provided a prediction: 1, probability: 0.7707069379689151
+2026-06-07 17:01:23,034 | INFO | Model provided a prediction: 1, probability: 0.7707069379689152
