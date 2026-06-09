@@ -40,43 +40,45 @@ with col3:
     slope = st.number_input("Slope", 0, 2, 2)
     ca = st.number_input("Number of Major Vessels (ca)", 0, 4, 0)
     thal = st.number_input("Thal", 0, 3, 2)
+
     if st.button("🔍 Predict"):
-       input_data = {
-        "age": age,
-        "sex": sex,
-        "cp": cp,
-        "trestbps": trestbps,
-        "chol": chol,
-        "fbs": fbs,
-        "restecg": restecg,
-        "thalach": thalach,
-        "exang": exang,
-        "oldpeak": oldpeak,
-        "slope": slope,
-        "ca": ca,
-        "thal": thal
-    }
+        input_data = {
+            "age": age,
+            "sex": sex,
+            "cp": cp,
+            "trestbps": trestbps,
+            "chol": chol,
+            "fbs": fbs,
+            "restecg": restecg,
+            "thalach": thalach,
+            "exang": exang,
+            "oldpeak": oldpeak,
+            "slope": slope,
+            "ca": ca,
+            "thal": thal,
+        }
 
-    response = requests.post(API_URL, json=input_data)
-    
-
-    if response.status_code != 200:
-        st.error("Something went wrong. Try again later...")
-    
-    else:
-        result = response.json()
-        prediction = result["prediction"]
-        probability = result["probability"]
-        diagnosis = result["diagnosis"]
-
-        st.divider()
-
-        st.metric(
-            label="Heart Disease Probability",
-            value=f"{probability:.2f}"
-        )
-
-        if prediction == 1:
-            st.error(f"⚠️Model Prediction: {diagnosis}")
+        try:
+            response = requests.post(API_URL, json=input_data)
+        except Exception as e:
+            st.error(f"Request failed: {e}")
         else:
-            st.success(f"✅ Model Prediction: {diagnosis}")
+            if response.status_code != 200:
+                st.error("Something went wrong. Try again later...")
+            else:
+                result = response.json()
+                prediction = result.get("prediction")
+                probability = result.get("probability", 0.0)
+                diagnosis = result.get("diagnosis", "")
+
+                st.divider()
+                st.metric(
+                    label="Heart Disease Probability",
+                    value=f"{probability:.2f}"
+                )
+
+                if prediction == 1:
+                    st.error(f"⚠️ Model Prediction: {diagnosis}")
+                else:
+                    st.success(f"✅ Model Prediction: {diagnosis}")
+     
