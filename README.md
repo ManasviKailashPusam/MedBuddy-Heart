@@ -38,11 +38,7 @@ Heart disease is one of the leading causes of death worldwide. MedBuddy.ML lever
 
 ## 📸 Screenshots
 
-### Patient Details Form
-
-![Patient Form](screenshots/prediction-form.png)
-
-### Prediction Result
+### [[Prediction Result]](http://16.171.148.137:8501)
 
 ![Prediction Result](screenshots/result-page.png)
 
@@ -206,10 +202,5 @@ Prediction: Heart Disease Detected
 
 **Manasvi Pusam**
 
-LinkedIn: Your LinkedIn URL
 
-GitHub: Your GitHub URL
-
----
-
-⭐ If you found this project useful, consider giving it a star!
+ !
